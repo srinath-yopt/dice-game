@@ -3,8 +3,19 @@
 
 } */
 
+.app {
+  margin-top: 50px;
+  margin-left: 20px;
+  border: 1px solid #999;
+  width: 600px;
+}
+
+.spacer {
+  margin-top: 100px;
+}
 
 .dice {
+  position: relative;
   height: 100px;
   width: 100px;
   background-color: #e88;
@@ -17,4 +28,76 @@
   height: 30px;
   width: 30px;
   background-color: #336;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    left: 0px;
+    transform: rotate(0deg);
+  }
+
+  50%{
+    left: 200px;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    left: 400px;
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes moveRightLeft {
+  0% {
+    left: 400px;
+    transform: rotate(720deg);
+  }
+
+  50%{
+    left: 200px;
+    transform: rotate(360deg);
+  }
+
+  100% {
+    left: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+.at-left {
+  left: 0px;
+}
+
+.at-right{
+  left: 400px;
+}
+
+.move-dice-left-right {
+  animation: moveLeftRight 4s linear 0s;
+}
+
+.move-dice-right-left {
+  animation: moveRightLeft 4s linear 0s;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-container button {
+  border: 1px solid #555;
+  background-color: #444;
+  color: #eee;
+  height: 20px;
+}
+
+.btn-container button:hover {
+  background-color: #222;
 }
