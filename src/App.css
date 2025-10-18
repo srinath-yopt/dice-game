@@ -1,0 +1,20 @@
+
+/* .dice-container {
+
+} */
+
+
+.dice {
+  height: 100px;
+  width: 100px;
+  background-color: #e88;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-face {
+  height: 30px;
+  width: 30px;
+  background-color: #336;
+}
